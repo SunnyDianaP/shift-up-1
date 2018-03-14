@@ -3,8 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="shift_up-registration.css">
   </head>
   <body>
     <p>Hello Shift Up!</p>
+
+    <form action="action_page.php">
+  <div class="container" id="form">
+   <div id="center">
+    <h1>Shift_Up Hacknight</h1>
+    <h2>Sign Up</h2>
+    <p>Fill in the below fields to sign up for Shift_Up Hacknight</p>
+    <hr>
+	</div>
+
+   	<div id="fields">
+    	<label for="first name"><b>First Name</b></label>
+    	<input type="text" placeholder="Enter First Name" name="first name" required>
+	</div>
+
+	<div id="fields">
+     	<label for="last name"><b>Last Name</b></label>
+    	<input type="text" placeholder="Enter Last Name" name="last" required>
+	</div>
+
+	<div id="fields">
+     	<label for="date of birth"><b>Date of Birth</b></label>
+    	<input type="date" placeholder="Enter Date of Birth" name="date of birth" required>
+	</div>
+
+	<div id="fields">
+     	<label for="email"><b>Email</b></label>
+    	<input type="text" placeholder="Enter Email" name="email" required>
+	</div>
+    <!-- <label for="psw"><b>Password</b></label> -->
+    <!-- <input type="password" placeholder="Enter Password" name="psw" required> -->
+
+    <!-- <label for="psw-repeat"><b>Repeat Password</b></label> -->
+    <!-- <input type="password" placeholder="Repeat Password" name="psw-repeat" required> -->
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Is it okay if we email you?
+    </label>
+
+    <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p> -->
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+
   </body>
 </html>
