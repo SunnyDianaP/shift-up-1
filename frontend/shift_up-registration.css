@@ -1,3 +1,9 @@
+h1 {font-family: 'Montserrat', sans-serif;
+font-weight: bolder;}
+h2 {font-family: 'Montserrat', sans-serif;
+}
+p {font-size: 12px;}
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -41,7 +47,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {`
+input[type=submit] {
     background-color: #45a049;
 }
 
@@ -57,10 +63,12 @@ div {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #fields {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
 }
