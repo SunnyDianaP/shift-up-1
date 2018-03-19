@@ -4,10 +4,14 @@
     <meta charset="utf-8">
     <title>Registration Form</title>
     <link rel="stylesheet" type="text/css" href="shift_up-registration.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+    
   </head>
   <body>
-    <form action="action_page.php">
+
+<form id="form">
+  <!-- put inside form: action="input database connection"-->
   <div class="container" id="form">
    <div id="center">
     <h1>Shift_Up Hacknight</h1>
@@ -17,23 +21,27 @@
 	</div>
 
    	<div id="fields">
-    	<label for="first name"><b>First Name</b></label>
-    	<input type="text" placeholder="Enter First Name" name="first name" required>
+    	<label for="firstname"><b>First Name</b></label>
+      <br>
+    	<input type="text" placeholder="Enter First Name" name="firstname" id="firstname" required>
 	</div>
 
 	<div id="fields">
      	<label for="last name"><b>Last Name</b></label>
-    	<input type="text" placeholder="Enter Last Name" name="last" required>
+      <br>
+    	<input type="text" placeholder="Enter Last Name" name="lastname" id="lastname" required>
 	</div>
 
 	<div id="fields">
      	<label for="date of birth"><b>Date of Birth</b></label>
-    	<input type="date" placeholder="Enter Date of Birth" name="date of birth" required>
+      <br>
+    	<input type="date" placeholder="Enter Date of Birth" name="dateofbirth" id="dateofbirth" required>
 	</div>
 
 	<div id="fields">
      	<label for="email"><b>Email</b></label>
-    	<input type="text" placeholder="Enter Email" name="email" required>
+      <br>
+    	<input type="text" placeholder="Enter Email" name="email" id="email" required>
 	</div>
     <!-- <label for="psw"><b>Password</b></label> -->
     <!-- <input type="password" placeholder="Enter Password" name="psw" required> -->
@@ -48,11 +56,31 @@
     <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p> -->
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+      <button onclick="myFunction()" type="button" class="signupbtn">Sign Up</button> 
     </div>
   </div>
 </form>
 
+<p id="thankyou"></p>
+
   </body>
 </html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+function myFunction() {
+    document.getElementById("thankyou").innerHTML = 'Thank you for registering!';
+    var objectData =
+         {
+             firstname: document.getElementById('firstname').value,
+             lastname: document.getElementById('lastname').value,
+             dateofbirth: document.getElementById('dateofbirth').value,
+             email: document.getElementById('email').value,
+         };
+    document.getElementById("form").style.display = "none";
+    var objectDataString = JSON.stringify(objectData);
+console.log(objectData);
+}
+</script>
